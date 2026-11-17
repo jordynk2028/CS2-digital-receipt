@@ -46,13 +46,24 @@ public class Main {
   System.out.print("Enter High school name");
       highSchoolName=input.nextLine();
 
+      int firstSpace = highSchoolName.indexOf(" ");
+      int secondSpace = highSchoolName.indexOf(" ", firstSpace + 1);
+
+      String initialsOfSchool = highSchoolName.substring(0,1)
+      + highSchoolName.substring(firstSpace * 1, firstSpace * 2)
+      + highSchoolName.substring(secondSpace * 1, secondSpace * 2);
+
+      
+
+
+
 
 
    
       // Receipt
       System.out.println("**************************************");
      System.out.println("*                                    *");
-     System.out.println("*     High School Snack Bar          *");
+     System.out.println("*     " initialsOfSchool +" High School Snack Bar          *");
      System.out.println("*     Order Number:"   + "orderNum             *");
      System.out.println("*     Drinks x" + numDrinks +" ..........$" + drinkPrice * numDrinks);                      
      System.out.println("*     Candy x" + numCandies +"..........$" + candyPrice * numCandies);     
