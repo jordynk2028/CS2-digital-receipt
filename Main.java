@@ -1,3 +1,5 @@
+
+import java.util.Scanner;
 public class Main {
 
    public static void main(String []args) {
@@ -9,11 +11,11 @@ public class Main {
       double candyPrice= 1.25;
       double hotdogPrice= 2.75;
       double hamburgerPrice= 3.50;
-      int orderNum= Math.random()*100 +1;
-      int numDrinks= Math.random()*3;
-      int numCandies= Math.random()*3;
-      int numHotdogs= Math.random()*3;
-      int numHamburgers= Math.random()*3;
+      int orderNum= (int) (Math.random()*100 +1);
+      int numDrinks= (int) (Math.random()*3);
+      int numCandies=(int) (Math.random()*3);
+      int numHotdogs= (int) (Math.random()*3);
+      int numHamburgers= (int) (Math.random()*3);
       double orderSubtotal = 
       (numDrinks * drinkPrice)
       +(numCandies * candyPrice)
@@ -23,6 +25,26 @@ public class Main {
       double taxRate = 0.08;
       double totalTax = (orderSubtotal * taxRate);
       double orderTotal = (orderSubtotal + totalTax);
+
+
+      //Scanner 
+      Scanner input = new Scanner(System.in);
+      
+      System.out.print("Enter number of drinks");
+      numDrinks=input.nextInt();
+
+       System.out.print("Enter number of candies");
+     numCandies=input.nextInt();
+
+       System.out.print("Enter number hot dogs");
+      numHotdogs=input.nextInt();
+
+       System.out.print("Enter number of hamburgers");
+      numHamburgers=input.nextInt();
+
+      
+  System.out.print("Enter High school name");
+      highSchoolName=input.nextLine();
 
 
 
