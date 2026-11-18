@@ -6,7 +6,7 @@ public class Main {
 
       //Variables
 
-      String highSchoolName = "BWL";
+      String highSchoolName = "Birch Wathen Lenox7";
       double drinkPrice= 1.50;
       double candyPrice= 1.25;
       double hotdogPrice= 2.75;
@@ -43,15 +43,11 @@ public class Main {
       numHamburgers=input.nextInt();
 
       
-  System.out.print("Enter High school name");
-      highSchoolName=input.nextLine();
 
-      int firstSpace = highSchoolName.indexOf(" ");
-      int secondSpace = highSchoolName.indexOf(" ", firstSpace + 1);
-
-      String initialsOfSchool = highSchoolName.substring(0,1)
-      + highSchoolName.substring(firstSpace * 1, firstSpace * 2)
-      + highSchoolName.substring(secondSpace * 1, secondSpace * 2);
+     String initials1 = highSchoolName.substring(0,1);
+     String initials2 = highSchoolName.substring(6,7);
+     String initials3 = highSchoolName.substring(13,14);
+     System.out.println(initials1 + initials2 + initials3);
 
       
 
@@ -63,7 +59,7 @@ public class Main {
       // Receipt
       System.out.println("**************************************");
      System.out.println("*                                    *");
-     System.out.println("*     " initialsOfSchool +" High School Snack Bar          *");
+     System.out.println("*     "+ highSchoolName +" High School Snack Bar          *");
      System.out.println("*     Order Number:"   + "orderNum             *");
      System.out.println("*     Drinks x" + numDrinks +" ..........$" + drinkPrice * numDrinks);                      
      System.out.println("*     Candy x" + numCandies +"..........$" + candyPrice * numCandies);     
